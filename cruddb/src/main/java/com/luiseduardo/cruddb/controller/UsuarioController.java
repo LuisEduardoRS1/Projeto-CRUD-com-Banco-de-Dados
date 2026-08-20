@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.luiseduardo.cruddb.entity.Usuario;
+import com.luiseduardo.cruddb.service.UsuarioService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +26,7 @@ public class UsuarioController {
     UsuarioService usuarioService;
     
 
-    @PostMapping()
+    @PostMapping
     public Usuario cadastrar(@RequestBody Usuario usuario) {
         return usuarioService.cadastrar(usuario);
     }
